@@ -1,10 +1,9 @@
 ## Scope
-
+Target: Metasploitable 2  
 Target IP: 192.168.1.117  
-Environment: Local Lab (Metasploitable 2)
+Environment: Isolated Lab Network
 
-# Lab 01 - Network Discovery and Service Enumeration
-
+# Lab 01 - Network Reconnaissance and Service Enumeration
 ---
 
 ## Objective
@@ -44,8 +43,7 @@ nmap -sV 192.168.1.117
 The `-sV` flag enables service version detection, allowing identification of the software and versions running on open ports.
 
 ### Findings
-
-The scan revealed multiple open ports and associated services, including:
+The scan identified several open ports and running services:
 
 * FTP (vsftpd 2.3.4)
 * HTTP (port 80)
@@ -94,10 +92,16 @@ The FTP service is running:
 
 * vsftpd 2.3.4
 
-This version is known to contain a backdoor vulnerability that can allow unauthorized remote access.
-
+This version is known to contain a backdoor vulnerability that allows remote command execution without authentication.
 ---
 
 ## Disclaimer
 
-This lab was conducted in a controlled environment for educational and ethical testing purposes only.
+This lab was conducted in a controlled environment for educational and ethical testing purposes only. 
+
+## Recommended Mitigation
+
+- Upgrade the FTP service to a secure version
+- Disable FTP if not required
+- Implement network segmentation
+- Restrict access to critical services
