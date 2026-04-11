@@ -1,4 +1,5 @@
 ## Scope
+
 Target: Metasploitable 2  
 Target IP: 192.168.1.117  
 Environment: Isolated Lab Network
@@ -90,15 +91,15 @@ Advanced enumeration provides deeper insight into the target environment, allowi
 
 The FTP service is running:
 
-* vsftpd 2.3.4
-
-This version is known to contain a backdoor vulnerability that allows remote command execution without authentication.
+- FTP (vsftpd 2.3.4)
+  
+This version contains a known backdoor vulnerability that allows unauthenticated remote command execution, leading to full system compromise.
 ---
 
 ## Disclaimer
 
 This lab was conducted in a controlled environment for educational and ethical testing purposes only. 
-
+---
 ## Recommended Mitigation
 
 - Upgrade the FTP service to a secure version
